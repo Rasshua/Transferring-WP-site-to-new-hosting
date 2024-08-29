@@ -83,13 +83,22 @@ This is the screenshot of WinSCP work:
 
 ### 3.2. Creating a database dump on the local machine
 
-1.  Connect to the database on the old site histing via appropriate tool (DBeaver, phpMyAdmin etc):
+1.  Connect to the database on the old site histing via appropriate tool (DBeaver, phpMyAdmin etc)
 
 In the given exanple, we are connecting to MariaDB database "wp_db" on the virtual machine via DBeaver. From the web server perspective, the database is located on localhost, and we are connecting to the server via SSH.
 
 Connection details look like this:
 
 ![DBeaver-main](https://github.com/Rasshua/Transferring-WP-site-to-new-hosting/blob/main/assets/dbeaver-main.png)
+
 ![DBeaver-SSH](https://github.com/Rasshua/Transferring-WP-site-to-new-hosting/blob/main/assets/dbeaver-ssh.png)
+
+2. Make the dump of database on the local machine
+
+![DBeaver-dump](https://github.com/Rasshua/Transferring-WP-site-to-new-hosting/blob/main/assets/dbeaver-dump.png)
+
+Select all tables in the database, and then save the file .sql on the local machine.
+
+
 
 
