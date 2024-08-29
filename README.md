@@ -101,4 +101,10 @@ Select all tables in the database, and then save the file .sql on the local mach
 
 ![Dump-wp_db](https://github.com/Rasshua/Transferring-WP-site-to-new-hosting/blob/main/assets/dump-wp_db.png)
 
+## 4. Copying the site from the local machine to new hosting
+
+
+
+
+
 
