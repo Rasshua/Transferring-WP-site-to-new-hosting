@@ -67,6 +67,17 @@ drwxr-xr-x 30 u934128498 o1005197286 12288 Jul 17 12:55 wp-includes
 -rw-r--r--  1 u934128498 o1005197286  3246 Mar  2 13:49 xmlrpc.php
 ```
 
+3. Create .tar archive for all site files and subdirectories:
+```console
+cd <site_directory>
+tar -cvf <site-name>.tar ./
+```
+
+4. Down load the .tar archive to the local machine (for example, via WinSCP, Filezilla, etc)
+
+This is the screenshot of WinSCP work:
+
+![WinSCP](https://github.com/Rasshua/Transferring-WP-site-to-new-hosting/blob/main/assets/winscp-tar-downloading.png)
 
 
 
