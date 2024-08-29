@@ -29,9 +29,11 @@ For the new hosting the user will need:
 3. Ability to import the dump of WP database to new database (for example, via phpMyAdmin)
 4. Ability to perform SQL queries on new database (for example, via phpMyAdmin)
 
-## 3. Creating a full copy of the site on the local machine
+## 3. Activities on the old site hosting
 
-1. Logging in on the local machine via SSH:
+### 3.1. Creating a full copy of the site files on the local machine
+
+1. Logging in on the old hosting via SSH:
 ```console
 ssh <username>@your_local_server_name
 ```
@@ -73,12 +75,21 @@ cd <site_directory>
 tar -cvf <site-name>.tar ./
 ```
 
-4. Down load the .tar archive to the local machine (for example, via WinSCP, Filezilla, etc)
+4. Download the .tar archive to the local machine (for example, via WinSCP, Filezilla, etc)
 
 This is the screenshot of WinSCP work:
 
 ![WinSCP](https://github.com/Rasshua/Transferring-WP-site-to-new-hosting/blob/main/assets/winscp-tar-downloading.png)
 
+### 3.2. Creating a database dump on the local machine
 
+1.  Connect to the database on the old site histing via appropriate tool (DBeaver, phpMyAdmin etc):
+
+In the given exanple, we are connecting to MariaDB database "wp_db" on the virtual machine via DBeaver. From the web server perspective, the database is located on localhost, and we are connecting to the server via SSH.
+
+Connection details look like this:
+
+![DBeaver-main](https://github.com/Rasshua/Transferring-WP-site-to-new-hosting/blob/main/assets/dbeaver-main.png)
+![DBeaver-SSH](https://github.com/Rasshua/Transferring-WP-site-to-new-hosting/blob/main/assets/dbeaver-ssh.png)
 
 
