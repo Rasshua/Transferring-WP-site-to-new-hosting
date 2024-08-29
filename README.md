@@ -15,3 +15,59 @@ So, during the transfering process it is necessary to perform the following step
 3. Change the site configuration file(s) according to new hosting parameters
 4. Modify some records in the database
 
+## 2. Prerequisites
+
+For the old hosting the user must have the following:
+
+1. Ability to make a copy of all site files on the local PC
+2. Ability to create the dump of WP database (for example, via DBeaver or phpMyAdmin)
+
+For the new hosting the user will need:
+
+1. Access to site files in the dedicated directory (add, modify, and delete files)
+2. Ability to create new database and to link it with desired site name
+3. Ability to import the dump of WP database to new database (for example, via phpMyAdmin)
+4. Ability to perform SQL queries on new database (for example, via phpMyAdmin)
+
+## 3. Creating a full copy of the site on the local machine
+
+1. Logging in on the local machine via SSH:
+```console
+ssh <username>@your_local_server_name
+```
+2. Identifying the directory, where site files are located:
+```console
+cd /var/www/site_name
+ls -al
+```
+In the given example, web server operates under Apache and, therefore, all site files are located in _/var/www/_ directory. For other kind of servers the location of site files may be specified separately.
+
+This is an example how the directory with WP site files looks like:
+```console
+total 304
+-rw-r--r--  1 u934128498 o1005197286   405 Feb  6  2020 index.php
+-rw-r--r--  1 u934128498 o1005197286 19915 Aug 27 13:21 license.txt
+-rw-r--r--  1 u934128498 o1005197286  7409 Aug 27 13:21 readme.html
+-rw-r--r--  1 u934128498 o1005197286  7387 Feb 13  2024 wp-activate.php
+drwxr-xr-x  9 u934128498 o1005197286  4096 May  7 15:52 wp-admin
+-rw-r--r--  1 u934128498 o1005197286   351 Feb  6  2020 wp-blog-header.php
+-rw-r--r--  1 u934128498 o1005197286  2323 Jun 14  2023 wp-comments-post.php
+-rw-r--r--  1 u934128498 o1005197286  3406 Aug 27 19:58 wp-config.php
+-rw-r--r--  1 u934128498 o1005197286  3033 Jul 17 12:55 wp-config-sample.php
+drwxr-xr-x  9 u934128498 o1005197286  4096 Aug 27 19:59 wp-content
+-rw-r--r--  1 u934128498 o1005197286  5638 May 30  2023 wp-cron.php
+drwxr-xr-x 30 u934128498 o1005197286 12288 Jul 17 12:55 wp-includes
+-rw-r--r--  1 u934128498 o1005197286  2502 Nov 26  2022 wp-links-opml.php
+-rw-r--r--  1 u934128498 o1005197286  3937 Jul 17 12:55 wp-load.php
+-rw-r--r--  1 u934128498 o1005197286 51238 Jul 17 12:55 wp-login.php
+-rw-r--r--  1 u934128498 o1005197286  8525 Sep 16  2023 wp-mail.php
+-rw-r--r--  1 u934128498 o1005197286 28774 Jul 17 12:55 wp-settings.php
+-rw-r--r--  1 u934128498 o1005197286 34385 Jun 19  2023 wp-signup.php
+-rw-r--r--  1 u934128498 o1005197286  4885 Jun 22  2023 wp-trackback.php
+-rw-r--r--  1 u934128498 o1005197286  3246 Mar  2 13:49 xmlrpc.php
+```
+
+
+
+
+
