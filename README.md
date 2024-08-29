@@ -29,7 +29,7 @@ For the new hosting the user will need:
 3. Ability to import the dump of WP database to new database (for example, via phpMyAdmin)
 4. Ability to perform SQL queries on new database (for example, via phpMyAdmin)
 
-## 3. Activities on the old site hosting
+## 3. Copying the site from old hosting to the local machine
 
 ### 3.1. Creating a full copy of the site files on the local machine
 
@@ -99,6 +99,6 @@ Connection details look like this:
 
 Select all tables in the database, and then save the file .sql on the local machine.
 
-
+![Dump-wp_db](https://github.com/Rasshua/Transferring-WP-site-to-new-hosting/blob/main/assets/dump-wp_db.png)
 
 
