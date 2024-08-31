@@ -116,7 +116,7 @@ ssh -p <port> <username>@ip_or_server_URL>
 
 ![Site_Dir](https://github.com/Rasshua/Transferring-WP-site-to-new-hosting/blob/main/assets/site-dir.png)
 
-It depence on the hosting provider, and it must be described in the hosting documentation. My hoster uses the directory "pinlic_html" as WP site root.
+It depence on the hosting provider, and it must be described in the hosting documentation. My hoster uses the directory "public_html" as WP site root.
 
 Switch to the WP site directory on the host server:
 ```console
@@ -135,6 +135,29 @@ tar -xvf <site-name>.tar
 5. Check the content of the WP site directory, it must look like this:
 
 ![public-html](https://github.com/Rasshua/Transferring-WP-site-to-new-hosting/blob/main/assets/public-html.png)
+
+### 4.2. Import the site database to the hosting server
+
+The easiest way is described here, which assume creation a new pure database and then importing database dump here.
+
+1. Create a new database on hosting site using hosting Dashboard / Database management tool:
+
+![create-databasel](https://github.com/Rasshua/Transferring-WP-site-to-new-hosting/blob/main/assets/create-database.png)
+
+Note Database name, User name and Password for future using in site configuration phase.
+
+2. Connect to new database via PhpMyAdmin:
+
+![phpmyadmin](https://github.com/Rasshua/Transferring-WP-site-to-new-hosting/blob/main/assets/phpmyadmin.png)
+
+3. Import the database dump via PhpMyAdmin:
+
+![db-import](https://github.com/Rasshua/Transferring-WP-site-to-new-hosting/blob/main/assets/db-import.png)
+
+
+
+
+
 
 
 
