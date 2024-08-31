@@ -103,8 +103,38 @@ Select all tables in the database, and then save the file .sql on the local mach
 
 ## 4. Copying the site from the local machine to new hosting
 
+### 4.1. Transfer (copying) of site files from the local machine to the hosting directory
 
+1. Login to the hosting server via SSH:
 
+Example: SSH login with non-22 port
+```console
+ssh -p <port> <username>@ip_or_server_URL>
+```
+
+2. Localize the directory where WP site files are located:
+
+![Site_Dir](https://github.com/Rasshua/Transferring-WP-site-to-new-hosting/blob/main/assets/site-dir.png)
+
+It depence on the hosting provider, and it must be described in the hosting documentation. My hoster uses the directory "pinlic_html" as WP site root.
+
+Switch to the WP site directory on the host server:
+```console
+cd public_html
+```
+
+3. Transfer the .tar file with site content to the WP site directory on the host server. It may be performed via WinSCP, Filezilla or file manager of hoster.
+
+![WinSCP-tar](https://github.com/Rasshua/Transferring-WP-site-to-new-hosting/blob/main/assets/winscp-tar.png)
+
+4. Unpack .tar archive into the WP site directory on the host server:
+```console
+tar -xvf <site-name>.tar
+```
+
+5. Check the content of the WP site directory, it must look like this:
+
+![public-html](https://github.com/Rasshua/Transferring-WP-site-to-new-hosting/blob/main/assets/public-html.png)
 
 
 
