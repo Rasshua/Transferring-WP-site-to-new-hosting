@@ -183,6 +183,20 @@ Make a note (copy) the SQL queries from the text area below:
 
 ### 5.2. Change the site configuration file
 
+Finally it is necessary to put new database parameters into the site configuration file "wp_config.php".
 
+1. Open "wp_config.php" file in the File Manager for editing:
+
+![file-manager](https://github.com/Rasshua/Transferring-WP-site-to-new-hosting/blob/main/assets/file-manager.png)
+
+2. Update Database name, Database username and Password data according to valuse noted on step 4.2 point 1:
+
+![wp-config](https://github.com/Rasshua/Transferring-WP-site-to-new-hosting/blob/main/assets/wp-config.png)
+
+Click on "Save" button to update the file.
+
+3. Open your site in the browser and make sure that everything is ok.
+
+![rasshua](https://github.com/Rasshua/Transferring-WP-site-to-new-hosting/blob/main/assets/rasshua.png)
 
 
