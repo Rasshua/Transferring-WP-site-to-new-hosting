@@ -144,7 +144,7 @@ The easiest way is described here, which assume creation a new pure database and
 
 ![create-databasel](https://github.com/Rasshua/Transferring-WP-site-to-new-hosting/blob/main/assets/create-database.png)
 
-Note Database name, User name and Password for future using in site configuration phase.
+Make a note of Database name, User name and Password for future using in site configuration phase.
 
 2. Connect to new database via PhpMyAdmin:
 
@@ -155,8 +155,33 @@ Note Database name, User name and Password for future using in site configuratio
 ![db-import](https://github.com/Rasshua/Transferring-WP-site-to-new-hosting/blob/main/assets/db-import.png)
 
 
+## 5. Setting up the site's database and configuration files
+
+### 5.1. Change the site domain - modify some records in the database
+
+1. Visit the website:
+```console
+[tar -xvf <site-name>.tar](https://rudrastyh.com/sql-queries-to-change-wordpress-website-domain)
+```
+
+2. Specify the URLs "From" and "To", as well as database prefix ("wp_" by default), and then click on the button "Generate queries":
+
+![sql-generate](https://github.com/Rasshua/Transferring-WP-site-to-new-hosting/blob/main/assets/sql-generate.png)
+
+Make a note (copy) the SQL queries from the text area below:
+
+![sql-queries](https://github.com/Rasshua/Transferring-WP-site-to-new-hosting/blob/main/assets/sql-queries.png)
+
+3. Run these SQL queries in the site database using phpMyAdmin:
+
+![phpmyadmin-sql](https://github.com/Rasshua/Transferring-WP-site-to-new-hosting/blob/main/assets/phpmyadmin-sql.png)
+
+4. Make sure that the requests were completed correctly:
+
+![sql-check](https://github.com/Rasshua/Transferring-WP-site-to-new-hosting/blob/main/assets/sql-check.png)
 
 
+### 5.2. Change the site configuration file
 
 
 
